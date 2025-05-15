@@ -54,8 +54,8 @@ func metricsController(res http.ResponseWriter, req *http.Request, storage MemSt
 		return
 	}
 	url := req.URL.Path
-	clearUrl := strings.TrimPrefix(url, "/update/")
-	urlArr := strings.Split(clearUrl, "/")
+	clearURL := strings.TrimPrefix(url, "/update/")
+	urlArr := strings.Split(clearURL, "/")
 	if len(urlArr) != 3 {
 		http.Error(res, "Invalid URL format", http.StatusNotFound)
 		return
